@@ -1,110 +1,120 @@
-# Ex03-Univariate-Analysis
+                   Ex no-3 Univariate Analysis
 
-# Aim
-To read the given data and perform the univariate analysis with different types of plots.
+
+AIM:
+              To Perform  Univariate Analysis on the given data
+           
+ Algorithm
  
-# Explanation
-Univariate analysis is basically the simplest form to analyze data. Uni means one and this means that the data has only one kind of variable. The major reason for univariate analysis is to use the data to describe. The analysis will take data, summarise it, and then find some pattern in the data.
+    1. Read the given data 
+    2.Get information from the data 
+    3.Perform the Univariate Analysis
+    4.Save the clean data to file
     
-# Algorithm
 
-## Step1
-Read the given data.
-    
-## Step2
-Get the information about the data.
-    
-## Step3
-Remove the null values from the data.
 
-## Step4
-Mention the datatypes from the data.
-    
-## Step5
-Count the values from the data.
-    
-## Step6
-Do plots like boxplots,countplot,distribution plot,histogram plot.
-    
-# Program
-```
-Developed by : SHAIK SADULLA
-Registration Number : 212220040151
-```
-```
-import pandas as pd
-import numpy as np
-import seaborn as sns
 
-df=pd.read_csv('superstore.csv')
-df
-
-df.head()
-df.info()
-df.describe()
+PROGRAM:
 df.isnull().sum()
 
-df.dtypes
+![image](https://user-images.githubusercontent.com/113016781/191760857-efabd7bf-72eb-430a-875f-d0d28f951c70.png)
 
-df['Postal Code'].value_counts()
-
-sns.boxplot(x='Postal Code', data=df)
-sns.countplot(x='Postal Code',data=df)
-sns.distplot(df["Postal Code"])
-sns.histplot(x='Postal Code',data=df)
-```
-
-# Output
-
-DATA
-
-![](./1.png)
+ df.info()
  
-DATA HEAD
+![image](https://user-images.githubusercontent.com/113016781/191761104-3ffe8bc3-fab6-4c38-85dc-7f166cb93a14.png)
 
-![](./2.png)
+df.dtypes
+![image](https://user-images.githubusercontent.com/113016781/191761320-2a5867e7-19f3-4f14-ae21-1c0809e67029.png)
 
-DATA INFORMATION
+df.dtypes
+![image](https://user-images.githubusercontent.com/113016781/191761401-4ef58417-14dd-42c8-a977-6380a5e92dda.png)
 
-![](./3.png)
+BOX PLOT:
+PROGRAM :
 
-DATA DESCRIBE
+import pandas as pd
 
-![](./4.png)
+import seaborn as sns
 
-DATA NULL VALUES
+sns.boxplot(x='Sales',data=df)
 
-![](./5.png)
-
-DATA'S DATATYPES
-
-![](./6.png)
-
-DATA'S VALUECOUNT
-
-![](./7.png)
-
-BOXPLOT
-
-![](./8.png)
-
-COUNTPLOT
-
-![](./9.png)
-
-DISTRIBUTION PLOT
-
-![](./10.png)
-
-HISTOGRAM PLOT
-
-![](./11.png)
-
-# Result
-Thus we have read the given data and performed the univariate analysis with different types of plots.
+![image](https://user-images.githubusercontent.com/113016781/191761492-12952ef2-909c-4f41-865e-6207e030a383.png)
 
 
+COUNTPLOT:
+PROGRAM
+import pandas as pd
+
+import seaborn as sns
+
+sns.countplot(x='Postal Code',data=df)
+
+![image](https://user-images.githubusercontent.com/113016781/191761827-292ee9c5-b690-4049-a140-b2669eb02810.png)
+
+
+DISPLOT:
+PROGRAM:
+import pandas as pd
+
+import seaborn as sns
+
+sns.displot(df["Postal Code"])
+
+![image](https://user-images.githubusercontent.com/113016781/191761963-5056b29c-a0e6-4bc0-98a3-6b255857a67d.png)
+
+histplot :
+PROGRAM:
+
+
+import pandas as pd
+
+import seaborn as sns
+
+sns.histplot(x="Postal Code",data=df)
+
+![image](https://user-images.githubusercontent.com/113016781/191762186-e2e92c52-ce52-4ec8-8ad4-a1a39538553f.png)
+
+
+Skew:
+import pandas as pd
+
+import seaborn as sns
+
+df=pd.read_csv("/content/SuperStore.csv")
+
+df.skew()
+
+![image](https://user-images.githubusercontent.com/113016781/191762425-c264f88f-4b4b-4674-8259-f50e6430b029.png)
+
+Hisplot:
+import pandas as pd
+
+import seaborn as sns
+
+sns.histplot(x='Sales',data=df)
+
+![image](https://user-images.githubusercontent.com/113016781/191762527-0c412e77-c7a6-4bec-89ce-5ecd0844822b.png)
+
+import pandas as pd
+
+import seaborn as sns
+
+sns.displot(x='Sales',data=df)
+
+![image](https://user-images.githubusercontent.com/113016781/191762647-2c7a4db7-6ceb-4195-acd8-bd86da79d916.png)
 
 
 
-    
+Result
+     
+     Univariate Analysis is performed on given data and saved
+
+
+
+
+
+
+
+
+
+
